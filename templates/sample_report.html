@@ -1,0 +1,186 @@
+{% extends "report_template.html" %}
+{% block content %}
+<div class="container pt-5 pl-5 pr-5 pb-3">
+  <div class="row">
+    <h2>Nmap Scan Report - Scanned at Tue Oct 15 18:41:24 2019</h2>
+    <br>
+    <p>3 IP addresses (2 hosts up) scanned in 87.31 seconds</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <input type="radio" name="hiddenbutton" value="livehosts" class="livehosts hidden" checked>
+      <input type="radio" name="hiddenbutton" value="allhosts" class="allhosts hidden">
+      <input type="radio" name="hiddenbutton1" value="alloses" class="alloses hidden" checked>
+      <input type="radio" name="hiddenbutton1" value="windowshosts" class="windowshosts hidden">
+      <input type="radio" name="hiddenbutton1" value="linuxhosts" class="linuxhosts hidden">
+      <div id="accordion">
+        <div class="card live windows">
+          <div class="card-header bg-primary" id="headingOne">
+            <div class="row">
+              <div class="col">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseOne"
+                          aria-expanded="false" aria-controls="collapseOne">
+                    92.63.46.60
+                  </button>
+                </h5>
+              </div>
+              <div class="col text-right">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseOne"
+                          aria-expanded="false" aria-controls="collapseOne">
+                    c-92-63-46-60.sample.hostname
+                  </button>
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                <th scope="col">Port</th>
+                <th scope="col">Protocol</th>
+                <th scope="col">Status</th>
+                <th scope="col">Service</th>
+                <th scope="col">Product</th>
+                <th scope="col">Version</th>
+                <th scope="col">Additional Info</th>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">135</th>
+                  <td>TCP</td>
+                  <td>open</td>
+                  <td>msrpc</td>
+                  <td>Microsoft Windows RPC</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">139</th>
+                  <td>TCP</td>
+                  <td>open</td>
+                  <td>netbios-ssn</td>
+                  <td>Microsoft Windows netbios-ssn</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </table><br>
+              <b>OS Detection:</b> Detected - Windows 10
+            </div>
+          </div>
+        </div>
+        <div class="card live linux">
+          <div class="card-header bg-primary" id="headingTwo">
+            <div class="row">
+              <div class="col">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseTwo"
+                          aria-expanded="false" aria-controls="collapseTwo">
+                    92.63.46.61
+                  </button>
+                </h5>
+              </div>
+              <div class="col text-right">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseTwo"
+                          aria-expanded="false" aria-controls="collapseTwo">
+                    c-92-63-46-61.other.hostname
+                  </button>
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                <th scope="col">Port</th>
+                <th scope="col">Protocol</th>
+                <th scope="col">Status</th>
+                <th scope="col">Service</th>
+                <th scope="col">Product</th>
+                <th scope="col">Version</th>
+                <th scope="col">Additional Info</th>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">22</th>
+                  <td>TCP</td>
+                  <td>open</td>
+                  <td>ssh</td>
+                  <td>OpenSSH</td>
+                  <td></td>
+                  <td>protocol 2.0</td>
+                </tr>
+                <tr>
+                  <th scope="row">80</th>
+                  <td>TCP</td>
+                  <td>open</td>
+                  <td>http</td>
+                  <td>Apache httpd</td>
+                  <td>2.2.22</td>
+                  <td>(Debian)</td>
+                </tr>
+                <tr>
+                  <th scope="row">111</th>
+                  <td>TCP</td>
+                  <td>open</td>
+                  <td>rpcbind</td>
+                  <td></td>
+                  <td>2-1</td>
+                  <td>RPC #100</td>
+                </tr>
+                </tbody>
+              </table><br>
+              <b>OS Detection:</b> Detected - Linux (Debian)
+            </div>
+          </div>
+        </div>
+        <div class="card dead">
+          <div class="card-header bg-danger" id="headingThree">
+            <div class="row">
+              <div class="col">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseThree"
+                          aria-expanded="false" aria-controls="collapseThree">
+                    92.63.46.62
+                  </button>
+                </h5>
+              </div>
+              <div class="col text-right">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseThree"
+                          aria-expanded="false" aria-controls="collapseThree">
+                  </button>
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              <p class="mb-0 p-1">Host seems down. If it is really up, but blocking our ping probes, try -Pn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2" id="filter-box">
+      Filter by: <br>
+      <input type="radio" name="hosttype" value="livehosts" class="livehosts" checked>Live Hosts<br>
+      <input type="radio" name="hosttype" value="allhosts" class="allhosts">All Hosts<br>
+      <br>
+      <input type="radio" name="hostos" value="alloses" class="alloses" checked>All OS types<br>
+      <input type="radio" name="hostos" value="windowshosts" class="windowshosts">Windows Hosts<br>
+      <input type="radio" name="hostos" value="linuxhosts" class="linuxhosts">Linux Hosts<br>
+    </div>
+  </div>
+</div>
+{% endblock %}

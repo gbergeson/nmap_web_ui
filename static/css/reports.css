@@ -1,0 +1,27 @@
+.hidden {
+  display: none
+}
+
+.livehosts:checked ~ #accordion > .dead {
+  display: none !important
+}
+
+.allhosts:checked ~ #accordion > .dead {
+  display: block
+}
+
+.windowshosts:checked ~ #accordion > div:not(.windows) {
+  display: none !important
+}
+
+.linuxhosts:checked ~ #accordion > div:not(.linux) {
+  display: none !important
+}
+
+.alloses:checked ~ #accordion > div {
+  display: block
+}
+
+.alloses:checked ~ #accordion > div {
+  display: block
+}
