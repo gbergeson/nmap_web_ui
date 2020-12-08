@@ -1,0 +1,88 @@
+{% extends "template.html" %}
+
+{% block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/configure.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-3">
+        <h4>Command line:</h4>
+        <div id="cmd_line">
+            <span id="prompt">$ nmap </span><span id="options"></span><span id="timing_profile"></span><span id="targets"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class=".d-block">
+            <h4>Target Specification:</h4>
+            <p class="mb-0">Can pass hostnames, IP addresses, networks, etc. <br>
+                Ex: scanme.nmap.org, microsoft.com/24, 192.168.0.1, 10.0.0-255.1-254</p>
+            <input type="text" id="targets_specify" placeholder="192.168.0.1/16">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class=".d-block">
+            <h4>Host Discovery:</h4>
+            <label><input type="checkbox" id="sL_option">Simply list targets to scan</label><br>
+            <label><input type="checkbox" id="sn_option">Disable port scan</label><br>
+            <label><input type="checkbox" id="Pn_option">Treat all hosts as online - ignore host discovery</label><br>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class=".d-block">
+            <h4>Service/Version Detection</h4>
+            <label><input type="checkbox" id="sV_option">Probe open ports to determine service/version info</label><br>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class=".d-block">
+            <h4>OS Detection</h4>
+            <label><input type="checkbox" id="O_option">Enable OS detection</label><br>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class=".d-block">
+            <h4>Timing and Performance</h4>
+            <p class="mb-0">Set timing template (higher is faster)</p>
+            <div class="timing_profiles">
+                <div class="timing_option">
+                    <label for="T0_option" class="mb-0">T0</label><br>
+                    <input type="radio" name="timing_profile" id="T0_option">
+                </div>
+                <div class="timing_option">
+                    <label for="T1_option" class="mb-0">T1</label><br>
+                    <input type="radio" name="timing_profile" id="T1_option">
+                </div>
+                <div class="timing_option">
+                    <label for="T2_option" class="mb-0">T2</label><br>
+                    <input type="radio" name="timing_profile" id="T2_option">
+                </div>
+                <div class="timing_option">
+                    <label for="T3_option" class="mb-0">T3</label><br>
+                    <input type="radio" name="timing_profile" id="T3_option">
+                </div>
+                <div class="timing_option">
+                    <label for="T4_option" class="mb-0">T4</label><br>
+                    <input type="radio" name="timing_profile" id="T4_option">
+                </div>
+                <div class="timing_option">
+                    <label for="T5_option" class="mb-0">T5</label><br>
+                    <input type="radio" name="timing_profile" id="T5_option">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class=".d-block">
+            <h4>Miscellaneous</h4>
+            <label><input type="checkbox" id="A_option">Enable OS detection and version detection</label><br>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script type=text/javascript src="{{ url_for('static', filename='js/configure.js') }}"></script>
+{% endblock %}

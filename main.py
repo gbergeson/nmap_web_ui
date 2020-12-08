@@ -7,9 +7,9 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route("/begin_scan")
-def begin_scan():
-    return render_template('begin_scan.html')
+@app.route("/configure")
+def configure():
+    return render_template('configure.html')
 
 @app.route("/report")
 def report():
